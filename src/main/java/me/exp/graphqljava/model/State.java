@@ -12,11 +12,11 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
-import javax.persistence.Version;;
+import javax.persistence.Version;
 
 @Table(name="state")
 @Entity
-public class State {
+public class State { 
 
 	@Id
 	@Column(name="name")
@@ -34,7 +34,7 @@ public class State {
 	List<City> cities;
 
 	//@Column(name="country")
-	@ManyToOne (cascade=CascadeType.ALL, fetch=FetchType.LAZY) 
+	@ManyToOne //(cascade=CascadeType.ALL, fetch=FetchType.EAGER) // don't use cascade all with ManyToOne
 	Country country; 
 
 
