@@ -34,8 +34,12 @@ public class State {
 	List<City> cities;
 
 	//@Column(name="country")
-	@ManyToOne //(cascade=CascadeType.ALL, fetch=FetchType.EAGER) // don't use cascade all with ManyToOne
-	Country country; 
+//	@ManyToOne //(cascade=CascadeType.ALL, fetch=FetchType.EAGER) // don't use cascade all with ManyToOne
+//	Country country; 
+
+	@ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "country")
+    private Country country; 
 
 
 	public State() { }
