@@ -77,7 +77,7 @@ public class GraphQLService {
     private void loadData() {
 
     	Country usa = new Country ("USA", "330000000");
-    	//Country usa_persisted = countryRepository.save(usa); 
+    	Country usa_persisted = countryRepository.save(usa); 
 
     	State ca = new State("CA", "39900000", usa);
     	State fl = new State("FL", "21300000", usa);
