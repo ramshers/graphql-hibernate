@@ -48,7 +48,7 @@ public class GraphQLService {
     private GraphQL graphQL;
   
     
-    @Autowired
+    @Autowired  
     private CityDataFetcher cityDataFetcher;
     @Autowired
     private AllCitiesDataFetcher allCitiesDataFetcher;
