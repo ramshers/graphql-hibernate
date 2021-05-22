@@ -22,8 +22,7 @@ public class Country {
 	@Column(name="population")
 	String population;
 	
-	@OneToMany(cascade=CascadeType.ALL, fetch=FetchType.EAGER)
-	@JoinColumn(name="country_name")
+	@OneToMany(mappedBy = "country") 
 	List<State> states; 
 	
 	public Country( ) { }	
